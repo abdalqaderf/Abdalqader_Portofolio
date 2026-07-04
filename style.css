@@ -24,7 +24,9 @@
     margin: 0;
     padding: 0;
 }
-
+a{
+    color: inherit;
+}
 body{
     background-color: var(--bg);
     z-index: 1000;
@@ -81,6 +83,7 @@ nav{
     align-items: center;
     padding: 0 5rem;
     border-bottom:1px solid var(--border);
+    z-index: 1000;
 }
 
 .nav-logo {
@@ -168,6 +171,7 @@ nav svg{
 
 .text-part{
     width: 100%;
+    margin-top: 4rem;
 }
 
 .img-part{
@@ -176,11 +180,11 @@ nav svg{
 .img-part img{
     width: 100%;
     height: auto;
-    aspect-ratio: 11 / 9;
+    aspect-ratio: 9/ 9;
     object-fit: contain;
     object-position: top;
     background-color: transparent;
-    z-index: 111;
+    
     filter: drop-shadow(0px 0px 40px rgba(209, 200, 77, 0.15));
 }
 
@@ -188,7 +192,7 @@ nav svg{
 .name{
     color: var(--text);
     font-weight:bolder;
-    font-size: 3.2rem;
+    font-size: 4.2rem;
 }
 
 .title{
@@ -212,13 +216,13 @@ nav svg{
 
 
 .primary-btn{
-    background-color: var(--accent);
-    color: var(--bg);
+    background: linear-gradient(135deg, #F5A623 0%, #E67E22 100%);    color: var(--bg);
     height: 3.5rem;
     width: 35%;
     border-radius: var(--radius-sm);
     font-size: var(--font-size-s);
     border: 1px solid var(--accent);
+    font-weight: 600;
 
 }
 
@@ -232,6 +236,7 @@ nav svg{
     font-size: var(--font-size-s);
     border: 2px solid var(--border);
     margin-left: 3rem;
+    font-weight: 600;
 }
 .sec-btn:hover{
     color: var(--accent-2);
@@ -242,8 +247,7 @@ nav svg{
 }
 .primary-btn:hover {
     transform: translateY(-4px);
-    background-color:#ecbc6e;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, #F5B043 0%, #E88E36 100%);    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 
 }
 .primary-btn, 
@@ -262,6 +266,9 @@ nav svg{
     .btn{
         display: flex;
         justify-content: center;
+    }
+    .text-part{
+        text-align: center;
     }
 }
 
@@ -304,7 +311,6 @@ nav svg{
     border-width: 2.5px ;
     transform: translateY(-4px);
 }
-
 
 .story-text p{
     color: var(--text-sec);
@@ -437,13 +443,13 @@ nav svg{
     font-size: var(--font-size-m);
     margin-top: 2.5rem ;
     padding-bottom: .5rem;
-    border-bottom: 1px solid var(--accent-2);
+    border-bottom: 1px solid var(--text-third);
     border-radius: 2px;
     transition: transform 0.25s ease-out, box-shadow 0.25s ease-out, background-color 0.25s ease-out, color 0.25s ease-out, border-color 0.25s ease-out;
 
 }
 .col-skills p:hover{
-    border-bottom-color: var(--accent);
+    border-bottom-color: var(--accent-2);
     transform: translateY(-2px);
 
 }
@@ -462,7 +468,7 @@ nav svg{
 .soft-skills-count p{
     color: var(--text);
     font-size: var(--font-size-m);
-    border-bottom: 1px solid var(--accent);
+    border-bottom: 1px solid var(--text-third);
     padding-bottom: .5rem;
     border-radius: 2px;
     transition: transform 0.25s ease-out, box-shadow 0.25s ease-out, background-color 0.25s ease-out, color 0.25s ease-out, border-color 0.25s ease-out;
@@ -474,9 +480,6 @@ nav svg{
 
 }
 
-.soft-skills-box:hover{
-    border-color: var(--accent);
-}
 
 .skills svg{
         margin: -4px 7px 0 0;
@@ -627,4 +630,152 @@ iconify-icon {
     .pro-cards{
         grid-template-columns: 1fr;
     }
+}
+
+
+/* Experience */
+.experience{
+    margin-top: 9rem;
+}
+
+.edu-card{
+    padding: 1.5rem;
+    color: var(--text);
+    margin-bottom: 1.5rem;
+}
+
+.pos-date{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .5rem;
+}
+
+.pos-date h4{
+    font-size: var(--font-size-l);
+}
+.pos-date p{
+    font-size: var(--font-size-m);
+    color: var(--text-sec);
+}
+
+.edu-card h5{
+    color: var(--accent);
+    font-size: var(--font-size-m);
+}
+
+.edu-card ul {
+    margin: 1rem 0;
+}
+.edu-card li{
+    font-size: var(--font-size-s);
+    line-height: 1.5;
+    margin: .8rem;
+}
+.edu-card li i{
+    margin-right: .5rem;
+}
+
+
+/* Contact */
+.contact{
+    margin-top: 9rem;
+}
+
+.contact-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.5rem 1.5rem 1.5rem 2rem;
+    gap: 10%;
+    color: var(--text);
+    align-items: center;
+}
+
+.call h2 , .call p , .call button{
+    margin: 1.5rem 0;
+    line-height: 1.5 ;
+}
+.call p{
+    color: var(--text-sec);
+}
+
+.ifno-box table {
+    width: 100%;
+    border-collapse: separate; 
+    border-spacing: 0 1.2rem;  
+}
+
+.ifno-box td {
+    background-color: var(--in-box);
+    padding: 1.2rem 1.5rem;
+    font-size: var(--font-size-m);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.ifno-box td:first-child {
+    width: 30%; 
+    color: var(--text-sec); 
+    border-left: 1px solid var(--border);
+    border-top-left-radius: var(--radius-sm);
+    border-bottom-left-radius: var(--radius-sm);
+}
+
+.ifno-box td:last-child {
+    color: var(--text);
+    border-right: 1px solid var(--border);
+    border-top-right-radius: var(--radius-sm);
+    border-bottom-right-radius: var(--radius-sm);
+}
+.ifno-box tr{
+    box-shadow: 0 4px 6px -1px rgba(16, 20, 41, 0.315), 0 10px 20px -5px rgba(0, 0, 0, 0.5); 
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+}
+
+
+.ifno-box tr td a:hover{
+    color: var(--accent-2);
+}
+
+
+@media (max-width: 992px){
+    .contact-box{
+        flex-direction: column;
+    }
+    .call {
+        text-align: center; 
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
+}
+
+footer{
+    margin-top: 7rem;
+    color: var(--text);
+    font-size: var(--font-size-s);
+}
+
+footer hr{
+    border: 1px solid var(--border);
+}
+.footer-content{
+    margin: 2rem 0;
+    padding:  0 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer-name span{
+    color: var(--text-third);
+}
+.footer-links a{
+    color: var(--text-third);
+    margin-left: 4px;
+}
+
+.footer-links a:hover{
+    color: var(--accent);
 }
